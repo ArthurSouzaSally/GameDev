@@ -30,10 +30,10 @@ var aux = window.scrollY;
 
 function mover(){
   if(window.scrollY>aux){
-    window.scrollY = aux+window.innerHeight;
+    window.scrollTo(aux+window.innerHeight, 0);
     aux = window.scrollY;
   }else if(window.scrollY<aux){
-    window.scrollY = aux-window.innerHeight;
+    window.scrollTo(aux-window.innerHeight, 0);
     aux = window.scrollY;
   }
 }
