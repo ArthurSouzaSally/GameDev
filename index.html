@@ -32,10 +32,10 @@ function mover(){
   console.log("e");
   if(window.scrollY>aux){
     window.scrollTo(0,aux+window.innerHeight);
-    aux = window.scrollY;
+    aux+=window.innerHeight;
   }else if(window.scrollY<aux){
     window.scrollTo(0,aux-window.innerHeight);
-    aux = window.scrollY;
+    aux-=window.innerHeight;
   }
 }
 
