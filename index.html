@@ -40,6 +40,8 @@ function mover(){
       aux-=window.innerHeight;
     }
     setTimeout(function(){mov=0;},250);
+  }else{
+    window.scrollTo(0,aux);
   }
   mov+=1;
 }
