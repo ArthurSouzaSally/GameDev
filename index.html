@@ -26,11 +26,16 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
+function mover(event){
+  console.log(window.scrollY);
+  console.log(window.innerHeight);
+}
+
 </script>
 
 </head>
 
-<body>
+<body onscroll="mover(event)">
 
   <!-- pagina 01 -->
 <div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;background:rgb(0,0,0);">
@@ -42,13 +47,17 @@ document.onclick=reEnable
   </div>
 </div>
 
+
   <!-- pagina 02 -->
-<div style="position:absolute;top:100%;left:0px;right:0px;bottom:-100%;background:url('1.jpg');background-repeat:no-repeat;background-size:100%;background-position:50% 50%;">
+<div style="position:absolute;top:100%;left:0px;right:0px;bottom:-100%;background:rgb(229,184,11);">
 </div>
 
-
   <!-- pagina 03 -->
-<div style="position:absolute;top:200%;left:0px;right:0px;bottom:-200%;background:url('CAPA01.png');background-repeat:no-repeat;background-size:100%;background-position:50% 50%;">
+<div style="position:absolute;top:200%;left:0px;right:0px;bottom:-200%;background:url('1.jpg');background-repeat:no-repeat;background-size:100%;background-position:50% 50%;">
+</div>
+
+  <!-- pagina 04 -->
+<div style="position:absolute;top:300%;left:0px;right:0px;bottom:-300%;background:url('CAPA01.png');background-repeat:no-repeat;background-size:100%;background-position:50% 50%;">
 </div>
 
 </body>
