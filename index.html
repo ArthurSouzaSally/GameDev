@@ -29,6 +29,7 @@ document.onclick=reEnable
 var aux = window.scrollY;
 
 function mover(){
+  console.log("e");
   if(window.scrollY>aux){
     window.scrollTo(0,aux+window.innerHeight);
     aux = window.scrollY;
