@@ -26,9 +26,15 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
+var aux = window.scrollY;
+
 function mover(){
-  while(window.scrollY<window.innerHeight/2){
-    setTimeout(function(){window.scrollY-=10;},10);
+  if(window.scrollY>aux){
+    window.scrollY = aux+window.innerHeight;
+    aux = window.scrollY;
+  }else if(window.scrollY<aux){
+    window.scrollY = aux-window.innerHeight;
+    aux = window.scrollY;
   }
 }
 
