@@ -27,9 +27,8 @@ document.onclick=reEnable
 }
 
 function mover(){
-  if(window.scrollY<window.innerHeight/2){
-    setTimeout(function(){window.scrollY-=1;},1);
-    mover();
+  while(window.scrollY<window.innerHeight/2){
+    setTimeout(function(){window.scrollY-=10;},10);
   }
 }
 
