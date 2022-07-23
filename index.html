@@ -30,7 +30,6 @@ var aux = window.scrollY;
 var mov = 0;
 
 function mover(){
-  console.log("e");
   if(mov==0){
     if(window.scrollY>aux){
       window.scrollTo(0,aux+window.innerHeight);
@@ -39,7 +38,7 @@ function mover(){
       window.scrollTo(0,aux-window.innerHeight);
       aux-=window.innerHeight;
     }
-    setTimeout(function(){mov=0;},250);
+    setTimeout(function(){mov=0;},100);
   }else{
     window.scrollTo(0,aux);
   }
