@@ -26,16 +26,18 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
-function mover(event){
-  console.log(window.scrollY);
-  console.log(window.innerHeight);
+function mover(){
+  if(window.scrollY<window.innerHeight/2){
+    setTimeout(function(){window.scrollY-=1;},1);
+    mover();
+  }
 }
 
 </script>
 
 </head>
 
-<body onscroll="mover(event)">
+<body onscroll="mover()">
 
   <!-- pagina 01 -->
 <div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;background:rgb(0,0,0);">
