@@ -27,16 +27,21 @@ document.onclick=reEnable
 }
 
 var aux = window.scrollY;
+var mov = 0;
 
 function mover(){
   console.log("e");
-  if(window.scrollY>aux){
-    window.scrollTo(0,aux+window.innerHeight);
-    aux+=window.innerHeight;
-  }else if(window.scrollY<aux){
-    window.scrollTo(0,aux-window.innerHeight);
-    aux-=window.innerHeight;
+  if(mov==0){
+    if(window.scrollY>aux){
+      window.scrollTo(0,aux+window.innerHeight);
+      aux+=window.innerHeight;
+    }else if(window.scrollY<aux){
+      window.scrollTo(0,aux-window.innerHeight);
+      aux-=window.innerHeight;
+    }
+    setTimeout(function(){mov=0;},250);
   }
+  mov+=1;
 }
 
 </script>
