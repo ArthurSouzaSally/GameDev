@@ -46,12 +46,17 @@ function mover(){
   }
   mov+=1;
 }
+  
+function atualizar(){
+  aux = 0;
+  window.scrollTo(0,0);
+}
 
 </script>
 
 </head>
 
-<body onscroll="mover()">
+<body onscroll="mover()" onload="atualizar()">
 
   <!-- pagina 01 -->
 <div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;background:rgb(0,0,0);">
