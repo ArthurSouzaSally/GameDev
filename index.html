@@ -30,14 +30,9 @@ document.onclick=reEnable
 
 var aux = window.scrollY;
 var mov = 0;
-  
-function rmover(){
-  window.scrollTo(0,aux);
-}
 
 function mover(){
   if(mov==0){
-    window.removeEventListener("scroll", rmover);
     if(window.scrollY>aux){
       window.scrollTo(0,aux+window.innerHeight);
       aux+=window.innerHeight;
@@ -46,10 +41,8 @@ function mover(){
       aux-=window.innerHeight;
     }
     setTimeout(function(){mov=0;},200);
-    //
-    window.addEventListener("scroll", rmover);
   }else{
-    //window.scrollTo(0,aux);
+    window.scrollTo(0,aux);
   }
   mov+=1;
 }
