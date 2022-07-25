@@ -32,17 +32,17 @@ var aux = window.scrollY;
 var mov = 0;
 
 function mover(){
+  var tmp = window.scrollY;
+  window.scrollTo(0, aux);
   if(mov==0){
-    if(window.scrollY>aux){
+    if(tmp>aux){
       window.scrollTo(0,aux+window.innerHeight);
       aux+=window.innerHeight;
-    }else if(window.scrollY<aux){
+    }else if(tmp<aux){
       window.scrollTo(0,aux-window.innerHeight);
       aux-=window.innerHeight;
     }
     setTimeout(function(){mov=0;},200);
-  }else{
-    window.scrollTo(0, aux);
   }
   mov+=1;
 }
