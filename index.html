@@ -55,7 +55,7 @@ function carregar(nome){
 }
 
 function vai(nome){
-  window.history.pushState({'html':data[nome],'pageTitle':'Arthur Souza Sally'},"",'lond.html');
+  window.history.pushState({'html':data[nome],'pageTitle':'Arthur Souza Sally'},"",nome);
   document.open();
   document.write(data[nome]);
 }
