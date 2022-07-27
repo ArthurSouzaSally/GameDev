@@ -41,6 +41,25 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
+var data = {};
+
+function carregar(nome){
+  var x = new XMLHttpRequest();
+  x.open("GET",nome,false);
+  x.onload = function(e){
+    if(this.readyState==4){
+      data[nome] = this.response;
+    }
+  }
+  x.send();
+}
+
+function vai(nome){
+  window.history.pushState({'html':p1,'pageTitle':'Arthur Souza Sally'},"",'lond.html');
+  document.open();
+  document.write(data[nome]);
+}
+
 </script>
 
 </head>
@@ -67,7 +86,7 @@ document.onclick=reEnable
               <font class="t1" id="titulo">Meu Portfolio</font>
             </td>
             <td>
-              <button onmouseover="alert('oi')" onmouseup="vai('lond.html')" class="op2">></button>
+              <button onmouseover="carregar('lond.html')" onmouseup="vai('lond.html')" class="op2">></button>
             </td>
           </tr>
         </table>
