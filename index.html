@@ -10,8 +10,8 @@
   
 <style type="text/css">
 
-body{cursor:default;}
-  
+body{cursor:default;background:rgb(0,0,0);}
+
 @font-face{font-family:"pixel";src:url('editundo.ttf')format('truetype');}
 
 :not(p){font-family:pixel;color:rgb(255,255,255);font-size:4vh;}
@@ -28,83 +28,13 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
-var aux = window.scrollY;
-var mov = 0;
-
-function mover(){
-  var tmp = window.scrollY;
-  window.scrollTo(0, aux);
-  if(mov==0){
-    if(tmp>aux){
-      window.scrollTo(0,aux+window.innerHeight);
-      aux+=window.innerHeight;
-    }else if(tmp<aux){
-      window.scrollTo(0,aux-window.innerHeight);
-      aux-=window.innerHeight;
-    }
-    setTimeout(function(){mov=0;},200);
-  }
-  mov+=1;
-}
-  
-function atualizar(){
-  aux = 0;
-  window.scrollTo(0,0);
-}
-
 </script>
 
 </head>
 
-<body onscroll="mover()" onload="atualizar()">
+<body>
 
-  <!-- pagina 01 -->
-<div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;background:rgb(0,0,0);">
-  <div style="height:100%;width:100%;display:flex;justify-content:center;align-items:center;">
-    <fieldset style="border:1px solid rgb(255,255,255);border-radius:1vh;">
-      <legend><b style="color:rgb(229,184,11);">Tutorial</b></legend>
-      Use a <b style="color:rgb(200,0,0);">Rodinha do Mouse</b> para ver o meu historico
-    </fieldset>
-  </div>
-</div>
-
-  <!-- pagina 02 -->
-<div style="position:absolute;top:100%;left:0px;right:0px;bottom:-100%;">
-  <div style="height:100%;width:100%;background:rgb(229,184,11);display:flex;justify-content:center;align-items:center;">
-    <fieldset style="border:1px solid rgb(0,0,0);border-radius:1vh;color:rgb(0,0,0);max-width:80vw;color:rgb(255,255,255);text-shadow:1px 1px 0px rgb(0,0,0),-1px 1px 0px rgb(0,0,0),1px -1px 0px rgb(0,0,0),-1px -1px 0px rgb(0,0,0);">
-      <legend style="color:rgb(255,255,255);text-shadow:1px 1px 0px rgb(0,0,0),-1px 1px 0px rgb(0,0,0),1px -1px 0px rgb(0,0,0),-1px -1px 0px rgb(0,0,0);">Introdução</legend>
-      <span style="margin-left:40px;">Sou um Programador com habilidades em <b style="color:rgb(19,92,163);">HTML</b>, <b style="color:rgb(19,92,163);">CSS</b>, <b style="color:rgb(19,92,163);">PHP</b> e <b style="color:rgb(19,92,163);">JavaScript</b>, que uso principalmente para criar sites<b style="color:rgb(200,0,0);">.</b> E <b style="color:rgb(19,92,163);">Python</b>, <b style="color:rgb(19,92,163);">Rust</b> e <b style="color:rgb(19,92,163);">OpenGL</b> para programar software e jogos<b style="color:rgb(200,0,0);">.</b> Além de estar estudando para aprender a modelar cenários e personagens 3D usando o <b style="color:rgb(19,92,163);">Blender</b><b style="color:rgb(200,0,0);">.</b></span>
-    </fieldset>
-  </div>
-</div>
-
-  <!-- pagina 03 -->
-<div style="position:absolute;top:200%;left:0px;right:0px;bottom:-200%;">
-  <div style="height:100%;width:100%;background:url('1.jpg');background-size:cover;background-position:50% 50%;" align="center">
-    <div style="height:100%;width:calc(100% - 80px);">
-      <br/>
-      <fieldset style="border:1px solid rgb(0,0,0);border-radius:1vh;color:rgb(0,0,0);text-shadow:1px 1px 0px rgb(255,255,255),-1px 1px 0px rgb(255,255,255),1px -1px 0px rgb(255,255,255),-1px -1px 0px rgb(255,255,255);">
-        <legend style="color:rgb(0,0,0);text-shadow:1px 1px 0px rgb(255,255,255),-1px 1px 0px rgb(255,255,255),1px -1px 0px rgb(255,255,255),-1px -1px 0px rgb(255,255,255);">Em 2021</legend>
-        Eu criei o jogo "Lond" usando Python e OpenGL, disponivel de graça no <a style="color:rgb(0,0,0);" href="https://arthursouzasally.itch.io/lond">itch.io</a>
-      </fieldset>
-    </div>
-  </div>
-</div>
-
-  <!-- pagina 04 -->
-<div style="position:absolute;top:300%;left:0px;right:0px;bottom:-300%;">
-  <div style="height:100%;width:100%;background:url('CAPA01.png');background-size:cover;background-position:0% 0%;" align="center">
-    <div style="height:100%;width:calc(100% - 80px);">
-      <div style="height:50%;"></div>
-      <fieldset style="border:1px solid rgb(255,255,255);border-radius:1vh;text-shadow:1px 1px 0px rgb(0,0,0),-1px 1px 0px rgb(0,0,0),1px -1px 0px rgb(0,0,0),-1px -1px 0px rgb(0,0,0);">
-        <legend style="text-shadow:1px 1px 0px rgb(0,0,0),-1px 1px 0px rgb(0,0,0),1px -1px 0px rgb(0,0,0),-1px -1px 0px rgb(0,0,0);">Em 2022</legend>
-        Eu criei o curta "Hannah Hill", com Python e OpenGL de graça no <a href="https://arthursouzasally.itch.io/hannah-hill">itch.io</a>
-      </fieldset>
-    </div>
-  </div>
-</div>
-  
-  <!-- pagina 05 : Vai ser para o meu 3º jogo, esperem! -->
+oi
 
 </body>
 
