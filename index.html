@@ -36,21 +36,19 @@ document.onclick=reEnable
 }
 
 function vai(event,n,m){
-  if(n==0){
+  if(m==''){
     document.getElementById("variante").innerHTML = "";
     document.getElementById("variante").style.top = "-10000px";
     document.getElementById("variante").style.left = "-10000px";
     document.getElementById("variante").style.height = "5px";
     document.getElementById("variante").style.width = "5px";
-  }
-  if(n==1){
+  }else{
     document.getElementById("variante").style.top = event.clientY+"px";
     document.getElementById("variante").style.left = event.clientX+"px";
-    var tmp = 0;
+    document.getElementById("variante").style.height = "100px";
+    var tmp = 1;
     while(tmp<101){
-      setInterval(function(){
-      document.getElementById("variante").style.width = tmp+"px";
-      },tmp*10);
+      setInterval(function(){document.getElementById("variante").style.width = tmp+"px";},tmp*10);
       tmp+=1;
     }
     //document.getElementById("variante").innerHTML = m;
@@ -76,7 +74,7 @@ function vai(event,n,m){
     <div style="width:calc(100% - 80px);" align="left">
       <h4>Minhas Coisas</h4>
       <a href="https://arthursouzasally.itch.io/hannah-hill"><button class="op1"><table width="100%"><tr><td align="left">Hannah Hill</td><td align="right">25/03/2022</td></tr></table></button></a>
-      <a href="https://arthursouzasally.itch.io/lond"><button class="op1" onmouseover="vai(event,1,'Lond')" onmouseleave="vai(event,0,'')"><table width="100%"><tr><td align="left">Lond</td><td align="right">19/04/2021</td></tr></table></button></a>
+      <a href="https://arthursouzasally.itch.io/lond"><button class="op1" onmouseover="vai(event,'Lond')" onmouseleave="vai(event,'')"><table width="100%"><tr><td align="left">Lond</td><td align="right">19/04/2021</td></tr></table></button></a>
     </div>
   </div>
 </div>
