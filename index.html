@@ -35,27 +35,49 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
+function vai(event,n,m){
+  if(n==0){
+    document.getElementById("variante").innerHTML = "";
+    document.getElementById("variante").style.top = "-10000px";
+    document.getElementById("variante").style.left = "-10000px";
+    document.getElementById("variante").style.height = "5px";
+    document.getElementById("variante").style.width = "5px";
+  }
+  if(n==1){
+    document.getElementById("variante").style.top = event.clientX+"px";
+    document.getElementById("variante").style.left = event.clientY+"px";
+    document.getElementById("variante").style.height = "100px";
+    document.getElementById("variante").style.width = "100px";
+    document.getElementById("variante").innerHTML = m;
+  }
+}
+
 </script>
 
 </head>
 
 <body>
 
-<div style="position:absolute;top:0px;left:0px;right:0px;">
+<!-- corpo -->
+<div style="position:absolute;top:0px;left:0px;right:0px;z-index:0;">
   <div style="height:10vh;width:100%;display:flex;justify-content:center;align-items:center;">
     <h3 style="text-decoration:underline;">Arthur Souza Sally's Portfolio</h3>
   </div>
-  <div style="width:100%;" align="center">
+  <div style="width:100%;margin-bottom:80px;" align="center">
     <div style="width:calc(100% - 80px);" align="left">
       <h4>Intro</h4>
       <span style="margin-left:40px;">Olá! Meu nome é Arthur e sou um programador e desenvolvedor de jogos. Criei essa pagina para mostrar projetos e coisas que eu já fiz ou participei.</span><br/><br/>
     </div>
     <div style="width:calc(100% - 80px);" align="left">
       <h4>Minhas Coisas</h4>
-      <a href="https://arthursouzasally.itch.io/hannah-hill"><button class="op1" onmousedown="vai(2)"><table width="100%"><tr><td align="left">Hannah Hill</td><td align="right">25/03/2022</td></tr></table></button></a>
-      <a href="https://arthursouzasally.itch.io/lond"><button class="op1" onmousedown="vai(1)"><table width="100%"><tr><td align="left">Lond</td><td align="right">19/04/2021</td></tr></table></button></a>
+      <a href="https://arthursouzasally.itch.io/hannah-hill"><button class="op1"><table width="100%"><tr><td align="left">Hannah Hill</td><td align="right">25/03/2022</td></tr></table></button></a>
+      <a href="https://arthursouzasally.itch.io/lond"><button class="op1" onmouseover="vai(event,1,'Lond')"><table width="100%"><tr><td align="left">Lond</td><td align="right">19/04/2021</td></tr></table></button></a>
     </div>
   </div>
+</div>
+
+<!-- sinopse -->
+<div id="variante" style="background:rgba(0,0,0,.5);border:1px solid rgb(120,120,120);border-radius:10px;height:5px;width:5px;position:fixed;top:-10000px;left:-10000px;z-index:1;">
 </div>
 
 </body>
