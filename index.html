@@ -48,7 +48,7 @@ function vai(event,n,m){
     document.getElementById("variante").style.height = "100px";
     var tmp = 1;
     while(tmp<101){
-      setInterval(function(){document.getElementById("variante").style.width = tmp+"px";},tmp*10);
+      setTimeout(function(){document.getElementById("variante").style.width = tmp+"px";},tmp*10);
       tmp+=1;
     }
     //document.getElementById("variante").innerHTML = m;
