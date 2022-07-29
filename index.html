@@ -44,11 +44,16 @@ function vai(event,n,m){
     document.getElementById("variante").style.width = "5px";
   }
   if(n==1){
-    document.getElementById("variante").style.top = event.clientX+"px";
-    document.getElementById("variante").style.left = event.clientY+"px";
-    document.getElementById("variante").style.height = "100px";
-    document.getElementById("variante").style.width = "100px";
-    document.getElementById("variante").innerHTML = m;
+    document.getElementById("variante").style.top = event.clientY+"px";
+    document.getElementById("variante").style.left = event.clientX+"px";
+    var tmp = 0;
+    while(tmp<101){
+      setInterval(function(){
+      document.getElementById("variante").style.width = tmp+"px";
+      },tmp*10);
+      tmp+=1;
+    }
+    //document.getElementById("variante").innerHTML = m;
   }
 }
 
