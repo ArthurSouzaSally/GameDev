@@ -35,6 +35,15 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
+function vai(n){
+  if(n==1){
+    
+  }
+  if(n==2){
+    
+  }
+}
+
 </script>
 
 </head>
@@ -52,10 +61,10 @@ document.onclick=reEnable
     </div>
     <div style="width:calc(100% - 80px);" align="left">
       <h4>Minhas Coisas</h4>
-      <a href="https://arthursouzasally.itch.io/hannah-hill"><button class="op1"><table width="100%"><tr><td align="left">Hannah Hill</td><td align="right">25/03/2022</td></tr></table></button></a>
-      <div style="height:0px;width:100%;" id="hannah_hill"></div>
-      <a href="https://arthursouzasally.itch.io/lond"><button class="op1"><table width="100%"><tr><td align="left">Lond</td><td align="right">19/04/2021</td></tr></table></button></a>
-      <div style="height:0px;width:100%;" id="lond"></div>
+      <button class="op1" onmousedown="vai(2)"><table width="100%"><tr><td align="left">Hannah Hill</td><td align="right">25/03/2022</td></tr></table></button>
+      <div style="height:0px;width:100%;background:rgb(200,0,0);box-shadow:0px 0px 5px rgb(200,0,0);" id="c2"></div>
+      <button class="op1" onmousedown="vai(1)"><table width="100%"><tr><td align="left">Lond</td><td align="right">19/04/2021</td></tr></table></button>
+      <div style="height:0px;width:100%;background:rgb(200,0,0);box-shadow:0px 0px 5px rgb(200,0,0);" id="c1"></div>
     </div>
   </div>
 </div>
