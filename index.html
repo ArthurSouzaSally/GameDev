@@ -47,7 +47,7 @@ function vai(event,n,m){
     document.getElementById("variante").style.left = event.clientX+"px";
     document.getElementById("variante").style.height = "100px";
     var tmp = 1;
-    while(tmp<101){
+    while(tmp<100){
       setTimeout(function(){document.getElementById("variante").style.width = tmp+"px";},tmp*10);
       tmp+=1;
     }
