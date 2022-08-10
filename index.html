@@ -38,6 +38,7 @@ document.onclick=reEnable
 }
 
 function atualizar(){
+  setTimeout(function(){document.getElementById("capa").style.opacity = "0.99";},10);
   document.getElementById("capa").style.top = "-100%";
   document.getElementById("capa").style.left = "-100%";
   document.getElementById("capa").style.right = "100%";
