@@ -37,11 +37,25 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
+function atualizar(){
+  document.getElementById("capa").style.top = "-100%";
+  document.getElementById("capa").style.left = "-100%";
+  document.getElementById("capa").style.right = "100%";
+  document.getElementById("capa").style.bottom = "100%";
+}
+
 </script>
 
 </head>
 
-<body>
+<body onload="atualizar()">
+  
+<!-- tela de Loading -->
+<div id="capa" style="position:fixed;top:0px;left:0px;right:0px;bottom:0px;z-index:1;">
+  <div style="height:100%;width:100%;background:rgb(0,0,0);display:flex;justify-content:center;align-items:center;">
+    <marquee>CARREGANDO</marquee>
+  </div>
+</div>
 
 <!-- corpo -->
 <div style="position:absolute;top:0px;left:0px;right:0px;z-index:0;">
