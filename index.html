@@ -38,7 +38,7 @@ document.onclick=reEnable
 }
 
 function atualizar(){
-  document.getElementById("capa").innerHTML = "<h2>CONCLUIDO!</h2>";
+  document.getElementById("capa").innerHTML = "<div style=\"height:100%;width:100%;background:rgb(0,0,0);display:flex;justify-content:center;align-items:center;\"><h2>CONCLUIDO!</h2></div>";
   setTimeout(function(){document.getElementById("capa").style.opacity = "0.99";},10);
   setTimeout(function(){document.getElementById("capa").style.opacity = "0.98";},20);
   setTimeout(function(){document.getElementById("capa").style.opacity = "0.97";},30);
