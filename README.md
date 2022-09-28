@@ -1,3 +1,3 @@
-# DevLogs
+# GameDev
 
-Acessivel em: https://arthursouzasally.github.io/DevLogs/
+Acessivel em: https://arthursouzasally.github.io/GameDev/
