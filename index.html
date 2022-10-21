@@ -39,7 +39,20 @@ document.onmousedown=disableselect
 document.onclick=reEnable
 }
 
+function n(){
+  if(document.getElementById("load").innerHTML == "."){
+    document.getElementById("load").innerHTML = "..";
+  }else if(document.getElementById("load").innerHTML == ".."){
+    document.getElementById("load").innerHTML = "...";
+  }else if(document.getElementById("load").innerHTML == "..."){
+    document.getElementById("load").innerHTML = ".";
+  }
+}
+
+var aux = setInterval(n, 500);
+
 function atualizar(){
+  clearInterval(aux);
   document.getElementById("capa").innerHTML = "<div style=\"height:100%;width:100%;background:rgb(0,0,0);display:flex;justify-content:center;align-items:center;\"><h2>CONCLUIDO!</h2></div>";
   setTimeout(function(){document.getElementById("capa").style.opacity = "0.99";},10);
   setTimeout(function(){document.getElementById("capa").style.opacity = "0.98";},20);
@@ -157,7 +170,7 @@ function atualizar(){
 <!-- tela de Loading -->
 <div id="capa" style="position:fixed;top:0px;left:0px;right:0px;bottom:0px;z-index:1;">
   <div style="height:100%;width:100%;background:rgb(0,0,0);display:flex;justify-content:center;align-items:center;">
-    <h2>CARREGANDO...</h2>
+    <h2>CARREGANDO</h2><h2 id="load">...</h2>
   </div>
 </div>
 
