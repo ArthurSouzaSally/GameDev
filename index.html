@@ -8,6 +8,8 @@
   <script type="text/javascript">
     function atualizar(){
       var c = document.getElementById("saida");
+      c.style.height = window.innerHeight+"px";
+      c.style.width = window.innerWidth+"px";
       var gl = c.getContext("webgl");
       gl.clearColor(1,0,0,1);
       gl.clear(gl.COLOR_BUFFER_BIT);
@@ -16,7 +18,7 @@
 </head>
 <body onload="atualizar()">
   <div style="position:fixed;top:0px;left:0px;right:0px;bottom:0px;">
-    <canvas id="saida" height="100%" width="100%"></canvas>
+    <canvas id="saida"></canvas>
   </div>
 </body>
 </html>
