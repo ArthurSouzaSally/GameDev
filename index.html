@@ -6,6 +6,18 @@
   <style type="text/css">
   </style>
   <script type="text/javascript">
+    const v = '
+      attribute vec4 posicao;
+      uniform mat4 view;
+      void main(){
+        gl_Position = view*posicao;
+      }
+      ';
+    const f = '
+      void main(){
+        gl_FragColor = vec4(1);
+      }
+      ';
     function atualizar(){
       var c = document.getElementById("saida");
       c.style.height = window.innerHeight+"px";
