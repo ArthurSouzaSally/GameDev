@@ -4,53 +4,13 @@
   <meta charset="utf-8"/>
   <title>Arthur Souza Sally</title>
   <style type="text/css">
-    body{background:rgb(0,0,0);}
-    :not(p){color:rgb(255,255,255);}
-    .op1{border:0px none;outline:0;background:rgba(0,0,0,0);background-size:100%;background-image:url('extras/jogos.webp');width:min(24vw,120px);aspect-ratio:2;}
-    .op2{border:0px none;outline:0;background:rgba(0,0,0,0);background-size:100%;background-image:url('extras/loja.webp');width:min(24vw,120px);aspect-ratio:2;}
-    .op3{border:0px none;outline:0;background:rgba(0,0,0,0);background-size:100%;background-image:url('extras/links.webp');width:min(24vw,120px);aspect-ratio:2;}
-    .op4{border:0px none;outline:0;background:rgba(0,0,0,0);background-size:100%;background-image:url('extras/faq.webp');width:min(24vw,120px);aspect-ratio:2;}
   </style>
   <script type="text/javascript">
   </script>
 </head>
 <body>
-  <!-- Propaganda Inicial -->
-  <div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;background-image:url('extras/wallpaper1.webp');z-index:1;">
-  </div>
-  <!-- Link do Ultimo Jogo -->
-  <div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;z-index:2;">
-    <div style="height:100%;width:100%;display:flex;justify-content:center;align-items:center;">
-      <!-- <button>DOWNLOAD</button> -->
-    </div>
-  </div>
-  <!-- Titulo de Menu -->
-  <div style="position:absolute;top:0px;left:0px;right:0px;z-index:3;">
-    <div style="width:100%;" align="center">
-      <img src="extras/titulo_itch_001.webp" style="width:min(100%,800px);"/>
-    </div>
-    <div style="width:100%;" align="center">
-      <a href="#jogos"><button class="op1"></button></a>
-      <a href="#loja"><button class="op2"></button></a>
-      <a href="#links"><button class="op3"></button></a>
-      <a href="#faq"><button class="op4"></button></a>
-    </div>
-  </div>
-  <!-- Jogos -->
-  <div id="jogos" style="position:absolute;top:100vh;left:0px;right:0px;bottom:-100vh;z-index:1;">
-    <img src="extras/jogos.webp" style="width:min(100%,400px);"/>
-  </div>
-  <!-- Loja -->
-  <div id="loja" style="position:absolute;top:200vh;left:0px;right:0px;bottom:-200vh;z-index:1;">
-    <img src="extras/loja.webp" style="width:min(100%,400px);"/>
-  </div>
-  <!-- Links -->
-  <div id="links" style="position:absolute;top:300vh;left:0px;right:0px;bottom:-300vh;z-index:1;">
-    <img src="extras/links.webp" style="width:min(100%,400px);"/>
-  </div>
-  <!-- FAQ -->
-  <div id="faq" style="position:absolute;top:400vh;left:0px;right:0px;bottom:-400vh;z-index:1;">
-    <img src="extras/faq.webp" style="width:min(100%,400px);"/>
+  <div style="position:fixed;top:0px;left:0px;right:0px;bottom:0px;">
+    <canvas id="saida" height="100vh" width="100vw"></canvas>
   </div>
 </body>
 </html>
