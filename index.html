@@ -6,14 +6,16 @@
   <style type="text/css">
   </style>
   <script type="text/javascript">
-    var c = document.getElementById("saida");
-    var ctx = c.getContext("2d");
-    ctx.moveTo(0,0);
-    ctx.lineTo(200,100);
-    ctx.stroke();
+    function atualizar(){
+      var c = document.getElementById("saida");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0,0);
+      ctx.lineTo(200,100);
+      ctx.stroke();
+    }
   </script>
 </head>
-<body>
+<body onload="atualizar()">
   <div style="position:fixed;top:0px;left:0px;right:0px;bottom:0px;">
     <canvas id="saida" height="100vh" width="100vw"></canvas>
   </div>
